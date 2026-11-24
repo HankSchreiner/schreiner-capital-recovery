@@ -6,6 +6,12 @@
 <title>Schreiner Capital Recovery | Unclaimed funds recovery for businesses</title>
 <meta name="description" content="We find money held for your business as unclaimed property and handle the claim. No upfront cost: we're paid a percentage only when you are.">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://hankschreiner.github.io/schreiner-capital-recovery/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Schreiner Capital Recovery">
+<meta property="og:description" content="We find money held for your business as unclaimed property and handle the claim. Nothing upfront; paid only when you are.">
+<meta property="og:url" content="https://hankschreiner.github.io/schreiner-capital-recovery/">
+<meta name="theme-color" content="#13233a">
 <style>
   :root {
     --ink: #13233a;
@@ -59,7 +65,7 @@
   /* sections */
   section { padding: 76px 0; }
   section.soft { background: var(--bg-soft); }
-  h2 { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  h2 { font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 12px; }
   .sub { color: var(--muted); margin: 0 0 40px; max-width: 40em; }
   .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
@@ -88,6 +94,21 @@
   .contact-list span { display: block; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
   .contact-list a { font-size: 19px; font-weight: 600; text-decoration: none; color: var(--ink); overflow-wrap: anywhere; }
 
+  .stats { background: var(--navy); color: #fff; }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 26px; padding-bottom: 26px; }
+  .stats b { display: block; font-size: 28px; letter-spacing: -0.02em; color: #7fd6a8; }
+  .stats span { display: block; color: #c9d3e0; font-size: 14px; line-height: 1.45; margin-top: 4px; }
+  .stats sup { font-size: 10px; }
+  .verify { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: start; }
+  .checks { list-style: none; margin: 0; padding: 0; }
+  .checks li { position: relative; padding: 14px 0 14px 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15.5px; }
+  .checks li:first-child { border-top: 0; padding-top: 0; }
+  .checks li:first-child::before { top: 2px; }
+  .checks li::before { content: ""; position: absolute; left: 0; top: 16px; width: 20px; height: 20px; border-radius: 6px; background: #e3f1e9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%231f6f4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
+  .checks b { color: var(--ink); }
+  .about { display: grid; grid-template-columns: 110px 1fr; gap: 32px; align-items: start; }
+  .about-mark { width: 110px; height: 110px; border-radius: 22px; background: var(--navy); color: #7fd6a8; display: grid; place-items: center; font-size: 38px; font-weight: 800; letter-spacing: 0.02em; }
+  footer a { color: var(--muted); }
   footer { border-top: 1px solid var(--line); padding: 30px 0 40px; color: var(--muted); font-size: 13.5px; }
   footer p { margin: 6px 0; }
 
@@ -97,7 +118,10 @@
     .logo { font-size: 15px; }
     .logo small { display: none; }
     .hero { padding: 54px 0 48px; }
-    .hero .wrap, .fee, .contact { grid-template-columns: 1fr; gap: 32px; }
+    .hero .wrap, .fee, .contact, .verify { grid-template-columns: 1fr; gap: 32px; }
+    .stats .wrap { grid-template-columns: 1fr 1fr; gap: 18px; }
+    .about { grid-template-columns: 1fr; gap: 20px; }
+    .about-mark { width: 72px; height: 72px; font-size: 26px; border-radius: 16px; }
     h1 { font-size: 35px; }
     .grid3, .grid4 { grid-template-columns: 1fr; }
     section { padding: 56px 0; }
@@ -116,6 +140,8 @@
     <nav>
       <a href="#how">How it works</a>
       <a href="#fees">Fees</a>
+      <a href="#verify">Verify us</a>
+      <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a class="cta" href="#contact">Contact</a>
     </nav>
@@ -146,6 +172,15 @@
   </div>
 </div>
 
+<div class="stats">
+  <div class="wrap">
+    <div><b>$70B+</b><span>held by state unclaimed property programs nationwide<sup>*</sup></span></div>
+    <div><b>$0</b><span>upfront cost to you, ever</span></div>
+    <div><b>100%</b><span>contingent: paid only from money actually returned</span></div>
+    <div><b>You</b><span>can always claim it yourself for free. We're the convenience.</span></div>
+  </div>
+</div>
+
 <section id="how">
   <div class="wrap">
     <h2>How it works</h2>
@@ -173,6 +208,44 @@
         set the limit at 10% of the amount recovered. We follow the rules of the state holding
         your funds, and the exact percentage is written into your agreement before we file anything.</p>
       <p class="sub" style="margin:0">If nothing is recovered, you owe nothing.</p>
+    </div>
+  </div>
+</section>
+
+<section id="verify">
+  <div class="wrap verify">
+    <div>
+      <h2>Check us out before you reply</h2>
+      <p class="sub">Unsolicited messages about money can feel too good to be true, so you should verify any
+        recovery service, including us. Here's how.</p>
+    </div>
+    <ul class="checks">
+      <li><b>Look up the money yourself.</b> Every state runs an official, free search. Start at
+        <a href="https://unclaimed.org/search/" target="_blank" rel="noopener">unclaimed.org</a>,
+        the national association of state programs, and pick the state. Search your company's name. If we
+        contacted you, the funds we described will be there.</li>
+      <li><b>We never ask for money up front.</b> No retainers, no filing fees, no "processing" charges. Our
+        fee comes only out of funds actually returned.</li>
+      <li><b>We never ask for passwords or bank logins</b>, and we won't ask for sensitive numbers by email.
+        Claim documents go directly to the state.</li>
+      <li><b>Everything is in writing first.</b> Where a state provides a standard investigator agreement,
+        we use it. It lists each item, the amount, who holds it, and our percentage before you sign anything.</li>
+      <li><b>Talk to a real person.</b> Call <a href="tel:+19132030532">(913) 203-0532</a> and ask anything.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="wrap about">
+    <div class="about-mark" aria-hidden="true">HS</div>
+    <div>
+      <h2>About us</h2>
+      <p class="sub" style="margin-bottom:14px">Schreiner Capital Recovery is an independent recovery firm founded by
+        Henry Schreiner and based in the Kansas City area. We work only for owners, never for the companies
+        that reported the funds, and only on contingency.</p>
+      <p class="sub" style="margin:0">Our focus is small and mid-size businesses and organizations: law firms,
+        contractors, medical and dental practices, engineering and consulting firms, nonprofits and others whose
+        money is too small to get a large firm's attention but too large to leave behind.</p>
     </div>
   </div>
 </section>
@@ -250,7 +323,10 @@
 
 <footer>
   <div class="wrap">
-    <p><strong>Schreiner Capital Recovery</strong></p>
+    <p><strong>Schreiner Capital Recovery</strong> · (913) 203-0532 ·
+      <a href="mailto:SchreinerCapitalRecovery@gmail.com">SchreinerCapitalRecovery@gmail.com</a> ·
+      <a href="privacy.html">Privacy</a></p>
+    <p><sup>*</sup> National Association of Unclaimed Property Administrators estimate of property held across all 50 states.</p>
     <p>Schreiner Capital Recovery is a private recovery service, not a government agency, and is not affiliated
       with any state unclaimed property program. Owners may claim unclaimed property directly from the state at no cost.
       Fees are contingent, agreed in writing, and comply with applicable state limits.</p>
