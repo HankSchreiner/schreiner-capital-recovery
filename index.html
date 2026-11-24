@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schreiner Capital Recovery | Unclaimed funds recovery for businesses</title>
+<meta name="description" content="We find money held for your business as unclaimed property and handle the claim. No upfront cost: we're paid a percentage only when you are.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --ink: #13233a;
+    --muted: #5b6b80;
+    --line: #e3e8ef;
+    --bg-soft: #f5f7fa;
+    --brand: #1f6f4a;
+    --brand-dark: #175739;
+    --navy: #13233a;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+  }
+  a { color: var(--brand); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* header */
+  header { border-bottom: 1px solid var(--line); background: #fff; position: sticky; top: 0; z-index: 10; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+  .logo svg { width: 30px; height: 30px; }
+  .logo small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+  nav a { color: var(--ink); text-decoration: none; margin-left: 26px; font-size: 15px; }
+  nav a:hover { color: var(--brand); }
+  nav .cta { background: var(--brand); color: #fff; padding: 9px 16px; border-radius: 999px; }
+  nav .cta:hover { background: var(--brand-dark); color: #fff; }
+
+  /* hero */
+  .hero { background: linear-gradient(180deg, #eef5f1 0%, #fff 100%); padding: 84px 0 72px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+  .eyebrow { color: var(--brand); font-weight: 600; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; }
+  h1 { font-size: 46px; line-height: 1.12; letter-spacing: -0.025em; margin: 12px 0 18px; }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; max-width: 34em; }
+  .btn { display: inline-block; background: var(--brand); color: #fff; text-decoration: none; font-weight: 600; padding: 14px 24px; border-radius: 999px; }
+  .btn:hover { background: var(--brand-dark); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: 10px; }
+  .btn.ghost:hover { border-color: var(--ink); }
+  .hero-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: 0 18px 40px rgba(19, 35, 58, 0.08); }
+  .hero-card h3 { margin: 0 0 14px; font-size: 16px; }
+  .ticks { list-style: none; margin: 0; padding: 0; }
+  .ticks li { padding: 9px 0 9px 32px; position: relative; border-top: 1px solid var(--line); font-size: 15.5px; }
+  .ticks li:first-child { border-top: 0; }
+  .ticks li::before { content: ""; position: absolute; left: 0; top: 12px; width: 20px; height: 20px; border-radius: 50%; background: #e3f1e9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%231f6f4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
+
+  /* sections */
+  section { padding: 76px 0; }
+  section.soft { background: var(--bg-soft); }
+  h2 { font-size: 32px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .sub { color: var(--muted); margin: 0 0 40px; max-width: 40em; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card h3 { margin: 8px 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .num { width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 15px; }
+  .icon { font-size: 22px; }
+
+  .fee { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: center; }
+  .fee-box { background: var(--navy); color: #fff; border-radius: var(--radius); padding: 34px; }
+  .fee-box .big { font-size: 54px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+  .fee-box p { color: #c9d3e0; margin: 12px 0 0; }
+
+  details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; margin-bottom: 12px; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; float: right; color: var(--muted); font-weight: 400; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin: 12px 0 0; }
+
+  .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .contact-list { list-style: none; padding: 0; margin: 0; }
+  .contact-list li { padding: 14px 0; border-top: 1px solid var(--line); }
+  .contact-list li:first-child { border-top: 0; }
+  .contact-list span { display: block; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .contact-list a { font-size: 19px; font-weight: 600; text-decoration: none; color: var(--ink); }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 0 40px; color: var(--muted); font-size: 13.5px; }
+  footer p { margin: 6px 0; }
+
+  @media (max-width: 860px) {
+    nav a:not(.cta) { display: none; }
+    header .wrap { height: 60px; }
+    .logo { font-size: 15px; }
+    .logo small { display: none; }
+    .hero { padding: 54px 0 48px; }
+    .hero .wrap, .fee, .contact { grid-template-columns: 1fr; gap: 32px; }
+    h1 { font-size: 35px; }
+    .grid3, .grid4 { grid-template-columns: 1fr; }
+    section { padding: 56px 0; }
+    .btn.ghost { margin: 10px 0 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13233a"/><path d="M9 17.5l4.5 4.5L23 11" fill="none" stroke="#4fc08d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Schreiner Capital Recovery<small>Unclaimed funds for businesses</small></span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#fees">Fees</a>
+      <a href="#faq">FAQ</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Unclaimed property recovery</div>
+      <h1>Money owed to your business may be sitting with the state.</h1>
+      <p class="lead">Uncashed vendor checks, refunds, insurance payments and old account balances
+        are turned over to state unclaimed property programs when they can't be delivered.
+        We find what's held in your company's name and handle the claim for you.</p>
+      <a class="btn" href="#contact">Ask about your business</a>
+      <a class="btn ghost" href="#how">How it works</a>
+    </div>
+    <div class="hero-card">
+      <h3>What working with us looks like</h3>
+      <ul class="ticks">
+        <li>Nothing to pay up front, ever</li>
+        <li>Paid only when your money is returned</li>
+        <li>Fees within the limits set by state law</li>
+        <li>We prepare and file all the paperwork</li>
+        <li>Former names, mergers and moves handled</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">States hold this money until the rightful owner files a claim. Most businesses never
+      check, and the claims process takes time and paperwork. That's the part we handle.</p>
+    <div class="grid4">
+      <div class="card"><div class="num">1</div><h3>We find it</h3><p>We search state unclaimed property records for funds reported in your company's name, including former names and old addresses.</p></div>
+      <div class="card"><div class="num">2</div><h3>We contact you</h3><p>We tell you what we found and the approximate amount. You decide whether you want our help.</p></div>
+      <div class="card"><div class="num">3</div><h3>We file the claim</h3><p>You sign a simple agreement that discloses exactly what the funds are. We assemble the claim and the supporting documents and see it through state review.</p></div>
+      <div class="card"><div class="num">4</div><h3>You get paid</h3><p>When the state approves the claim, the funds are released, and our percentage is paid only then.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="fees">
+  <div class="wrap fee">
+    <div class="fee-box">
+      <div class="big">$0</div>
+      <p>upfront, ever. Our fee is a percentage of the money actually returned to you,
+        agreed in writing before we start and never above the maximum your state allows.</p>
+    </div>
+    <div>
+      <h2>Simple, contingent fees</h2>
+      <p class="sub" style="margin-bottom:18px">Many states cap what recovery services may charge, and some
+        set the limit at 10% of the amount recovered. We follow the rules of the state holding
+        your funds, and the exact percentage is written into your agreement before we file anything.</p>
+      <p class="sub" style="margin:0">If nothing is recovered, you owe nothing.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What we typically find</h2>
+    <p class="sub">Common sources of unclaimed business funds.</p>
+    <div class="grid3">
+      <div class="card"><div class="icon">🧾</div><h3>Uncashed vendor checks</h3><p>Payments from customers or suppliers that were never deposited or reached an old address.</p></div>
+      <div class="card"><div class="icon">🛡️</div><h3>Insurance refunds &amp; claims</h3><p>Premium refunds and claim payments that couldn't be delivered.</p></div>
+      <div class="card"><div class="icon">🏦</div><h3>Dormant accounts</h3><p>Closed or inactive checking and savings balances, deposits and escrow funds.</p></div>
+      <div class="card"><div class="icon">↩️</div><h3>Overpayments &amp; credits</h3><p>Customer overpayments, credit balances and refunds due.</p></div>
+      <div class="card"><div class="icon">📈</div><h3>Dividends</h3><p>Uncashed dividends and stock held in the company's name.</p></div>
+      <div class="card"><div class="icon">🏢</div><h3>After a move or rebrand</h3><p>Money reported under a former name or address that no one is watching anymore.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <p class="sub">Straight answers.</p>
+    <details open>
+      <summary>Can I claim the money myself?</summary>
+      <p>Yes. Every state lets owners search and claim their property directly, for free. We're
+        a paid convenience: we find the money, assemble the documents, file the claim and follow
+        up through approval. If you'd rather do it yourself, we're happy to point you in the right direction.</p>
+    </details>
+    <details>
+      <summary>Is this legitimate?</summary>
+      <p>Yes. Unclaimed property programs are run by state governments, and recovery services like ours
+        are recognized by them. We never ask for payment up front, and our agreement states
+        exactly what the funds are and where they're held before you sign. Be wary of anyone who
+        wants money before your funds are returned.</p>
+    </details>
+    <details>
+      <summary>Are you a government agency?</summary>
+      <p>No. Schreiner Capital Recovery is a private business. We are not affiliated with or
+        endorsed by any state or government agency.</p>
+    </details>
+    <details>
+      <summary>How long does it take?</summary>
+      <p>States review claims carefully, and it usually takes a few months. Claims involving stock or
+        older company records can take longer. We track the claim and keep you updated.</p>
+    </details>
+    <details>
+      <summary>What do you need from us?</summary>
+      <p>Usually a signed agreement, a claim form signed by an officer or authorized person, and
+        documents showing the business owned the funds, such as a tax ID letter or records linking an
+        old name or address to your company. We tell you exactly what's needed.</p>
+    </details>
+    <details>
+      <summary>What if our company changed names or was acquired?</summary>
+      <p>That's common, and often why the money was never found. Claims under a former name need
+        extra records, and we help assemble them.</p>
+    </details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Talk to us</h2>
+      <p class="sub">Got a letter or email from us, or want us to check for your business? Call or email
+        and we'll look it up. There's no cost or obligation to ask.</p>
+    </div>
+    <ul class="contact-list">
+      <li><span>Phone</span><a href="tel:+19132030532">(913) 203-0532</a></li>
+      <li><span>Contact</span>Henry Schreiner</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Schreiner Capital Recovery</strong></p>
+    <p>Schreiner Capital Recovery is a private recovery service, not a government agency, and is not affiliated
+      with any state unclaimed property program. Owners may claim unclaimed property directly from the state at no cost.
+      Fees are contingent, agreed in writing, and comply with applicable state limits.</p>
+    <p>© <span id="y">2026</span> Schreiner Capital Recovery</p>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
